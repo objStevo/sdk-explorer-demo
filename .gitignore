@@ -1,5 +1,5 @@
-node_modules/*
-!node_modules/@adyen/api-library
+node_modules
 *.env
+todo.txt
 ./server/ignore
 .DS_Store
