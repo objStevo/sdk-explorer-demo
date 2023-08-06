@@ -36,4 +36,5 @@ app.use('/api/checkout', checkoutRouter);
 
 app.listen(PORT, () => {
   console.log('Your app is listening on port', PORT);
+  console.log('Client origin', CLIENT_ORIGIN);
 });
