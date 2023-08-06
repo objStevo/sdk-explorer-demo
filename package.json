@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/ossiggy/adyen-web-demo#readme",
   "engines": {
-    "node": "17.x"
+    "npm": "9.8.1"
   }
 }
