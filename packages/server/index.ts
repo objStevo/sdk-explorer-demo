@@ -23,12 +23,11 @@ app.use(
   })
 );
 
+// Issue is here, I am only sending back index.html when I should send back an file requested
+
 const root = path.join(__dirname, '../client', 'build');
 app.use(express.static(root));
-app.get('/', (req, res) => {
-  res.sendFile('index.html', { root });
-  console.log('index.html');
-});
+
 app.get('/:component', (req, res) => {
   res.sendFile('index.html', { root });
 });
