@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build -w ./packages/client && npm run start -w ./packages/server",
     "dev": "npm run start -w ./packages/server && npm run start -w ./packages/client",
-    "build": "npm run build -w ./packages/client && npm run start -w ./packages/server"
+    "build": "npm run build -w ./packages/client && npm run start -w ./packages/server",
+    "build:digitalocean": "npm install --production=true && npm run build -w ./packages/client && npm run start -w ./packages/server && npm ci"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/ossiggy/adyen-web-demo/issues"
   },
-  "homepage": "https://github.com/ossiggy/adyen-web-demo#readme"
+  "homepage": "https://github.com/ossiggy/adyen-web-demo#readme",
+  "engines": {
+    "node": "18.x"
+  }
 }
