@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "ts-mocha -p ./tsconfig.json ./test/**/*.ts --exit",
-    "start": "ts-node ."
+    "start": "npx ts-node ."
   },
   "author": "Mike Ossig & Hernán Chalco",
   "license": "ISC",
