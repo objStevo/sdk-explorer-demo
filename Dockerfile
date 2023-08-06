@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 FROM node:18-alpine
-WORKDIR /adyen-web-demo
+WORKDIR /sdk-explorer-uat
 COPY . .
 RUN npm install
 
