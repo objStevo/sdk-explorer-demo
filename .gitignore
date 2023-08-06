@@ -3,3 +3,5 @@ node_modules
 todo.txt
 ./server/ignore
 .DS_Store
+
+!node_modules/@adyen/api-library/
