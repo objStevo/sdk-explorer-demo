@@ -22,8 +22,5 @@
   "bugs": {
     "url": "https://github.com/ossiggy/adyen-web-demo/issues"
   },
-  "homepage": "https://github.com/ossiggy/adyen-web-demo#readme",
-  "engines": {
-    "node": "18.x"
-  }
+  "homepage": "https://github.com/ossiggy/adyen-web-demo#readme"
 }
