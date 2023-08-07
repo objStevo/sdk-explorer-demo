@@ -27,9 +27,13 @@ app.use(
 
 const root = path.join(__dirname, '../client', 'build');
 app.use(express.static(root));
-
+app.get('/', (req, res) => {
+  res.sendFile('index.html', { root });
+  console.log('requested index.html');
+});
 app.get('/:component', (req, res) => {
   res.sendFile('index.html', { root });
+  console.log('requested component page');
 });
 
 app.use('/api/checkout', checkoutRouter);
