@@ -1,9 +1,10 @@
 import cors from 'cors';
+import path from 'path';
 import express from 'express';
 
 import cookieParser from 'cookie-parser';
 
-import { CLIENT_ORIGIN, PORT } from './config';
+import { PORT, CLIENT_ORIGIN } from './config';
 import { checkoutRouter } from './routes';
 
 export const app = express();
@@ -21,6 +22,19 @@ app.use(
     origin: CLIENT_ORIGIN
   })
 );
+
+// Issue is here, I am only sending back index.html when I should send back an file requested
+
+const root = path.join(__dirname, '../client', 'build');
+app.use(express.static(root));
+app.get('/', (req, res) => {
+  res.sendFile('index.html', { root });
+  console.log('requested index.html');
+});
+app.get('/:component', (req, res) => {
+  res.sendFile('index.html', { root });
+  console.log('requested component page');
+});
 
 app.use('/api/checkout', checkoutRouter);
 
