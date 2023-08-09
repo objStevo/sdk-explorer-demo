@@ -70,8 +70,8 @@ export const MobileNavButtons = (props: NavButtonsProps) => {
         }}
         icon={<SpeedDialIcon />}
       >
-        {step !== 0 && <SpeedDialAction key="Back" icon={<NavigateBeforeIcon />} tooltipTitle="Back" onClick={handleBack} />}
         {step !== stepsLength - 1 && <SpeedDialAction key="Next" icon={<NavigateNextIcon />} tooltipTitle="Next" onClick={handleNext} />}
+        {step !== 0 && <SpeedDialAction key="Back" icon={<NavigateBeforeIcon />} tooltipTitle="Back" onClick={handleBack} />}
         <SpeedDialAction
           key="Reset"
           icon={<AutorenewIcon />}
