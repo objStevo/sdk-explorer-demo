@@ -9,7 +9,7 @@ export const ComponentContent = () => {
     mt: 2,
     a: { color: 'primary.main', textDecoration: 'none' },
     '.content-link-style': { bgcolor: 'secondary.light', px: 0.6, py: 0.5, borderRadius: 1, color: 'primary.main' },
-    '.sample-container': { mt: 3, border: 1, borderRadius: 1, borderColor: 'primary.border' },
+    '.sample-container': { mt: 3, border: 1, borderRadius: 1, borderColor: 'primary.border', },
     '.sample-title': { borderBottom: 1, p: 2, borderColor: 'primary.border' },
     '.sample-code': {
       maxHeight: '25vh',
@@ -106,16 +106,14 @@ export const ComponentContent = () => {
         </Grid>
         <Grid item xs={12} className="sample-container">
           <Box className="sample-code">
-            <Box>
-              <code>
-                const {txVariant}Component = checkout
-                <Box pl={5}>
-                  .create('{txVariant}','{txVariant}Configuration')
-                  <br />
-                  .mount('#{txVariant}-container');
-                </Box>
-              </code>
-            </Box>
+            <code>
+              const {txVariant}Component = checkout
+              <Box pl={5}>
+                .create('{txVariant}','{txVariant}Configuration')
+                <br />
+                .mount('#{txVariant}-container');
+              </Box>
+            </code>
           </Box>
         </Grid>
         <Grid item xs={12} my={2}>

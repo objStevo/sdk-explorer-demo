@@ -39,7 +39,6 @@ export const Navbar = ({ drawerWidth, headerHeight, page }: any) => {
       Toolbar: { justifyContent: { xs: 'start', md: 'start', lg: 'space-between', xl: 'space-between' } }
     },
     '#desktop-side-nav': { flexGrow: 1, display: { xs: 'none', sm: 'none', md: 'none', lg: 'block', xl: 'block' } },
-    '#mobile-side-nav': { width: `${drawerWidth}px`, '.MuiDrawer-paper': { position: 'initial' } },
     '#icon-button': {
       display: { xs: 'inline-block', md: 'inline-block', lg: 'none', xl: 'none' },
       svg: { color: 'primary.light', verticalAlign: 'top' },
@@ -81,12 +80,10 @@ export const Navbar = ({ drawerWidth, headerHeight, page }: any) => {
         </Box>
       </AppBar>
       <Box id="desktop-side-nav">
-        <Sidebar drawerWidth={drawerWidth} headerHeight={headerHeight} page={page} />
+        <Sidebar variant="permanent" open={true} drawerWidth={drawerWidth} headerHeight={headerHeight} page={page} />
       </Box>
-      <Box>
-        <Drawer anchor="left" open={isNavOpen} onClose={handleOpenNavMenu} id="mobile-side-nav">
-          <Sidebar drawerWidth={drawerWidth - 100} headerHeight={'-5'} page={page} />
-        </Drawer>
+      <Box id="mobile-side-nav">
+          <Sidebar variant="temporary" open={isNavOpen} onClose={handleOpenNavMenu} drawerWidth={drawerWidth} headerHeight={'-5'} page={page} />
       </Box>
     </Box>
   );
