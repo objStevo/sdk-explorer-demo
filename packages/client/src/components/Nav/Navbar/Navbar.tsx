@@ -83,7 +83,7 @@ export const Navbar = ({ drawerWidth, headerHeight, page }: any) => {
         <Sidebar variant="permanent" open={true} drawerWidth={drawerWidth} headerHeight={headerHeight} page={page} />
       </Box>
       <Box id="mobile-side-nav">
-          <Sidebar variant="temporary" open={isNavOpen} onClose={handleOpenNavMenu} drawerWidth={drawerWidth} headerHeight={'-5'} page={page} />
+          <Sidebar variant="temporary" open={isNavOpen} onClose={handleOpenNavMenu} drawerWidth={drawerWidth - 50} headerHeight={'-5'} page={page} />
       </Box>
     </Box>
   );
