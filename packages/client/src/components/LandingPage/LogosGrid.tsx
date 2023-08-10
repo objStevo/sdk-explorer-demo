@@ -3,9 +3,9 @@ import { Box, Grid, Link, Typography } from '@mui/material';
 export const LogosGrid = (props: any) => {
   const { logos, ...other } = props;
   return (
-    <Grid container justifyContent="center" {...other}>
+    <Grid py={3} container justifyContent="center" {...other}>
       {logos.map((logo: any) => (
-        <Grid key={logo.title} item xs={8} md={3} sx={{ display: 'flex', px: 2, py: 6 }}>
+        <Grid key={logo.title} item xs={10} md={3} sx={{ display: 'flex', px: 2, py: 3 }}>
           <Box id="logo">{logo.svg()}</Box>
           <Box sx={{ flex: '1 1 0', pl: 1 }}>
             <Typography id="step-title" variant="h5">

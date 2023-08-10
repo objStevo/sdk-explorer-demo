@@ -49,7 +49,7 @@ const CheckoutBuilder = ({ txvariant }: { txvariant: string }) => {
   }, [dispatch, data, redirectResult, txvariant]);
 
   return (
-    <Container maxWidth={false} disableGutters={true}>
+    <Container disableGutters={true}>
       <Paper elevation={0}>
         <ConfigWrapper />
       </Paper>

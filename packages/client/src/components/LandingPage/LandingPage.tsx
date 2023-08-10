@@ -164,7 +164,7 @@ export const LandingPage = () => {
 
   const style = {
     '#landing-page-about': { display: 'flex', flexWrap: 'wrap-reverse', justifyContent: 'space-between' },
-    '#landing-page-about-text': { mt: 6, mb: 2, ml: 8, mr: { xs: 8, sm: 8, md: 8, lg: 0 }, width: { xs: '100%', sm: '100%', md: '100%', lg: '50%' } },
+    '#landing-page-about-text': { mt: 6, mb: 2, ml: 6, mr: { xs: 6, sm: 6, md: 6, lg: 0 }, width: { xs: '100%', sm: '100%', md: '100%', lg: '50%' } },
     '#landing-page-about-image': {
       alignItems: 'flex-end',
       alignSelf: 'flex-start',
@@ -216,9 +216,9 @@ export const LandingPage = () => {
           <img src="https://adyen.getbynder.com/m/be33b14ac185e59/original/help-collections-hero.svg" alt="A girl picking books from a bookshelf." />
         </Box>
       </Box>
-      <Divider />
+      <Divider sx={{ bgcolor: 'secondary.light' }} />
       <LogosGrid logos={logos} id="logos-grid" />
-      <Divider />
+      <Divider sx={{ bgcolor: 'secondary.light' }} />
       <LinksGrid links={links} />
     </Box>
   );
