@@ -204,7 +204,7 @@ export const LandingPage = () => {
               <li>Get up to speed on all of Adyen SDK's optional configurations.</li>
             </ul>
           </Typography>
-          <Typography variant="h5">Not sure where to start</Typography>
+          <Typography variant="h5">Not sure where to start?</Typography>
           <Typography variant="caption">
             See our guide to{' '}
             <Link href="https://docs.adyen.com/online-payments/web-drop-in/optional-configuration" underline="none">
