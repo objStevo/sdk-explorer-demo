@@ -29,7 +29,7 @@ export const ComponentContent = () => {
       <Grid container sx={contentContainerStyle}>
         <Grid item xs={12}>
           <Typography component={'span'} mt={2} mb={2} variant="h3">
-            Step 3: Initialize the payment session
+            Step 3: Initialize the payment
           </Typography>
         </Grid>
         <Grid item xs={12} mt={2}>

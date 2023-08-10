@@ -16,6 +16,7 @@ export const useInitializeSession = ({ configuration, endpoint }: { configuratio
   const [checkout, setCheckout] = useState<any>(null);
   const [error, setError] = useState(null);
   const [result, setResult] = useState(null);
+  const maxPayloadSize = 1000000;
 
   const dispatch = useAppDispatch();
   const { activeStep, steps } = useSelector((state: RootState) => state.onDeck);
@@ -35,7 +36,7 @@ export const useInitializeSession = ({ configuration, endpoint }: { configuratio
     const payloadSize = new TextEncoder().encode(requestOptions.body).length;
     const initialize: () => void = async () => {
       try {
-        if (payloadSize > 1000000) {
+        if (payloadSize > maxPayloadSize) {
           throw 'Error: Max payload size for /sessionStart is 2 mb. Please reduce the size of the payload.';
         }
         const response = await fetch(`${API_URL}/api/checkout/sessionStart`, requestOptions);

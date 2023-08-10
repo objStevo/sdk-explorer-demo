@@ -13,11 +13,12 @@ interface NavButtonsProps extends BoxProps {
   steps: any;
   step: number;
   configuration: any;
+  txVariant: string;
 }
 
 export const MobileNavButtons = (props: NavButtonsProps) => {
   const { defaultSessionProps } = useSelector((state: RootState) => state.onDeck);
-  const { steps, step, configuration, ...other } = props;
+  const { steps, step, configuration, txVariant, ...other } = props;
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const { updateCheckoutInfo, updateLocalInfo, updateSessionsInfo, updateRedirectInfo, updateActiveStep, resetOnDeckInfo } = onDeckActions;
@@ -103,7 +104,7 @@ export const MobileNavButtons = (props: NavButtonsProps) => {
               setOpen(false);
               dispatch(resetOnDeckInfo());
               dispatch(updateSessionsInfo(defaultSessionProps));
-              navigate(`/${configuration.txVariant}`);
+              navigate(`/${txVariant}`);
             }}
             autoFocus
           >

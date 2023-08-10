@@ -11,10 +11,11 @@ interface ResetButtonProps extends BoxProps {
   steps: any;
   step: number;
   configuration: any;
+  txVariant: string;
 }
 
 export const ResetButton = (props: ResetButtonProps) => {
-  const { steps, step, configuration, ...other } = props;
+  const { steps, step, configuration, txVariant, ...other } = props;
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const { resetOnDeckInfo, updateSessionsInfo } = onDeckActions;
@@ -67,7 +68,7 @@ export const ResetButton = (props: ResetButtonProps) => {
               setOpen(false);
               dispatch(resetOnDeckInfo());
               dispatch(updateSessionsInfo(defaultSessionProps));
-              navigate(`/${configuration.txVariant}`);
+              navigate(`/${txVariant}`);
             }}
             autoFocus
           >
