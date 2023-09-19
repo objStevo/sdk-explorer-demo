@@ -46,6 +46,15 @@ export const Navbar = ({ drawerWidth, headerHeight, page }: any) => {
     }
   };
 
+  const SDKExplorerLogo = (props: any) => {
+    const { sx, ...other } = props;
+    return (
+      <Typography variant="h6" {...other} sx={{ ...sx, borderRadius: 1, px: 2, py: .7, display: 'inline-block', fontWeight: 'bold' }}>
+        SDK Explorer
+      </Typography>
+    );
+  };
+
   return (
     <Box sx={style}>
       <AppBar elevation={0} position="fixed" id="app-bar">
@@ -56,7 +65,15 @@ export const Navbar = ({ drawerWidth, headerHeight, page }: any) => {
                 <MenuIcon />
               </IconButton>
             </Box>
-            <Box sx={{ flexGrow: 1 }}>{theme === 'dark' ? <AdyenLogoDark /> : <AdyenLogoLight />}</Box>
+
+            <Box sx={{ flexGrow: 1 }}>
+              {theme === 'dark' ? (
+                <SDKExplorerLogo sx={{ color: '#7EDDA4', bgcolor: '#0E373C' }} />
+              ) : (
+                <SDKExplorerLogo sx={{ color: '#09AE4C', bgcolor: '#E6F8ED' }} />
+              )}
+            </Box>
+
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
               {links.map((link: any) => (
                 <Button
@@ -83,7 +100,7 @@ export const Navbar = ({ drawerWidth, headerHeight, page }: any) => {
         <Sidebar variant="permanent" open={true} drawerWidth={drawerWidth} headerHeight={headerHeight} page={page} />
       </Box>
       <Box id="mobile-side-nav">
-          <Sidebar variant="temporary" open={isNavOpen} onClose={handleOpenNavMenu} drawerWidth={drawerWidth - 100} headerHeight={'-5'} page={page} />
+        <Sidebar variant="temporary" open={isNavOpen} onClose={handleOpenNavMenu} drawerWidth={drawerWidth - 100} headerHeight={'-5'} page={page} />
       </Box>
     </Box>
   );

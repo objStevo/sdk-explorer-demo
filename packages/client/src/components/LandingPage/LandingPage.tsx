@@ -176,7 +176,7 @@ export const LandingPage = () => {
       bgcolor: 'background.default',
       px: 2,
       color: 'primary.light',
-      '#logo': { color: 'rgb(10, 191, 83)' },
+      '#logo': { color: 'success.main' },
       '#step-title': { color: 'secondary.main' },
       '#step-description': { color: 'secondary.main' }
     }
@@ -189,7 +189,7 @@ export const LandingPage = () => {
           <Typography variant="h2">
             Welcome to the
             <br />
-            Adyen SDK Explorer
+            SDK Explorer
           </Typography>
           <Typography component={'span'} sx={{ mt: 3 }} variant="body2">
             Configure our components to satisfy your business needs. Pass a parameter in the following implementation checkpoints:
